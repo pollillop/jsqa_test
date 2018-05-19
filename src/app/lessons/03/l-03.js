@@ -218,7 +218,9 @@ console.log('\nTask 03.02');
 // Points: 3
 // Add getInfo method to the lesson object, it should log lesson info to the console: lesson name, id and date.
 lesson.getInfo = function () {
-    console.log(lesson.name);
+    console.log('Lesson name: ' + this.name);
+    console.log('Lesson ID: ' + this.id);
+    console.log('Lesson date: ' + this.date);
 }
 lesson.getInfo()
 
