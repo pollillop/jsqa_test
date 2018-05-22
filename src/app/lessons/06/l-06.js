@@ -445,12 +445,15 @@ const glo = 'glo site';
 	console.log('\nPlease implement this task');
 
 	function blackbox(hidden){
-		return (function insider (hidden){
-			console.log(hidden);
+		return function insider (){
 			return hidden;
-		})();
+		};
 	}
-	blackbox('secret');
+	var blackboxResult = blackbox('secret');
+	console.log(blackboxResult);
+	
+	var insiderResult = blackboxResult();
+	console.log(insiderResult);
 
 	console.log('\nLesson 06 - Homework End');
 
